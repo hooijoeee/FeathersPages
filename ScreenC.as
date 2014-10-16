@@ -7,7 +7,7 @@
 	import feathers.events.FeathersEventType;
 	import feathers.controls.Button;
 	import feathers.controls.Panel;
-	//import Utils;
+	import Utils;
 	
 	import starling.events.Event;
 	
@@ -56,12 +56,12 @@
 			this.verticalScrollPolicy = ScrollContainer.SCROLL_POLICY_ON;
 			this.snapScrollPositionsToPixels = true
 			
-			/*var st1: ScrollText = new ScrollText();
-			st1.text = Utils.LOREM_IPSUM;
-			st1.height = 200;
+			var st1: ScrollText = new ScrollText();
+			st1.text = Utils1.LOREM_IPSUM;
+			st1.height = 50;
 			this.addChild(st1);
 			
-			var st2: ScrollText = new ScrollText();
+			/*var st2: ScrollText = new ScrollText();
 			st2.text = Utils.LOREM_IPSUM;
 			st2.height = 100;
 			this.addChild(st2);*/
