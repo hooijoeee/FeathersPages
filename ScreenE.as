@@ -13,39 +13,41 @@
 	
 	import starling.display.Quad;
 	
-	public class ScreenA extends PanelScreen {
+	public class ScreenE extends PanelScreen {
 		
-		public function ScreenA() 
+		public function ScreenE() 
 		{
-			trace("An object of ScreenA has has created");
+			trace("An object of ScreenE has has created");
 			super();
 			this.addEventListener(FeathersEventType.INITIALIZE, initializeHandler);
 		}
 		protected function initializeHandler(): void {
-			trace("ScreenA object initialized");
+			trace("ScreenE object initialized");
 			this.removeEventListener(FeathersEventType.INITIALIZE, initializeHandler);
-			this.headerProperties.title = "ScreenA";
+			this.headerProperties.title = "ScreenE";
 			var theLayout: VerticalLayout = new VerticalLayout();
 			theLayout.gap = 10;
 			theLayout.horizontalAlign = VerticalLayout.HORIZONTAL_ALIGN_CENTER;
 			theLayout.manageVisibility = true;
 			this.layout = theLayout;
-			this.verticalScrollPolicy = ScrollContainer.SCROLL_POLICY_ON;
+			/*this.verticalScrollPolicy = ScrollContainer.SCROLL_POLICY_ON;
 			this.snapScrollPositionsToPixels = true;
 			for (var i: int = 0; i < 100; i++) {
 				var size: Number = (44 + 88 * Math.random()) * this.dpiScale;
 				var quad: Quad = new Quad(size, size, 0xff8800);
 				this.addChild(quad);
-			}
-			var screenBButton: Button;
-			screenBButton = new Button();
-			screenBButton.label = "Screen B";
-			this.addChild(screenBButton);
-			screenBButton.addEventListener(Event.TRIGGERED, handlerScreenBButtonClick);
-		}
-		protected function handlerScreenBButtonClick(e: Event): void {
-			this.dispatchEventWith("showScreenB");
+			}*/
+			
+			var screenAButton: Button;
+			screenAButton = new Button();
+			screenAButton.label = "Screen A";
+			this.addChild(screenAButton);
+			screenAButton.addEventListener(Event.TRIGGERED, handlerScreenAButtonClick);
 		}
 		
+		protected function handlerScreenAButtonClick(e: Event): void {
+			this.dispatchEventWith("showScreenA");
+		
+		}
 	}
 }
